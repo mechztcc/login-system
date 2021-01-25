@@ -1,3 +1,6 @@
+[![login-page.png](https://i.postimg.cc/VkLWxWxD/login-page.png)](https://postimg.cc/zV6hWKXg)
+[![register-page.png](https://i.postimg.cc/SKbNXgmG/register-page.png)](https://postimg.cc/K1QywrkK)
+
 # LoginSystem
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.7.
