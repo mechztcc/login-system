@@ -3,26 +3,44 @@
         <div class="card-body">
             <h2 class="card-title header text-light text-center">New User</h2>
 
-            <form>
+            <form [formGroup]="form">
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="User name">
+                    <div *ngIf="form.controls.username.invalid && !form.controls.username.pristine" class="alert alert-danger">
+                        Invalid Nick Name
+                    </div>
+                    <input formControlName="username" type="text" class="form-control" placeholder="User name">
                 </div>
                 <div class="form-group">
-                    <input type="email" class="form-control" placeholder="Email">
+                    <div *ngIf="form.controls.email.invalid && !form.controls.email.pristine" class="alert alert-danger">
+                        Invalid Email Format
+                    </div>
+                    <input formControlName="email" type="email" class="form-control" placeholder="Email">
                 </div>
                 <div class="form-group">
-                    <input type="password" class="form-control" placeholder="Password">
+                    <div *ngIf="form.controls.password.invalid && !form.controls.password.pristine" class="alert alert-danger">
+                        Required Password
+                    </div>
+                    <input formControlName="password" type="password" class="form-control" placeholder="Password">
                 </div>
                 <div class="d-flex">
                     <div class="form-group">
-                        <input type="date" class="form-control" placeholder="">
+                        <input formControlName="date" type="date" class="form-control" placeholder="">
+                        <div *ngIf="form.controls.date.invalid && !form.controls.date.pristine" class="alert alert-danger">
+                            Date is Required
+                        </div>
                     </div>
                     <div class="form-group ml-1">
-                        <input type="text" class="form-control" placeholder="Zip" maxlength="9">
+                        <input formControlName="zip" type="text" class="form-control" placeholder="Zip" maxlength="9">
+                        <div *ngIf="form.controls.zip.invalid && !form.controls.zip.pristine" class="alert alert-danger">
+                            Zip Is Required 
+                        </div>
                     </div>
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Address">
+                    <input formControlName="address" type="text" class="form-control" placeholder="Address">
+                    <div *ngIf="form.controls.address.invalid && !form.controls.address.pristine" class="alert alert-danger">
+                        Address Is Required 
+                    </div>
                 </div>
                 <div class="form-check mb-2">
                     <input type="checkbox" class="form-check-input">
@@ -33,6 +51,7 @@
                     <button class="btn btn-outline-primary">Register</button>
                 </div>
             </form>
+            
             
         </div>
     </div>
