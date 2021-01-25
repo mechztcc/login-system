@@ -9,7 +9,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class LoginComponent implements OnInit {
 
 
-  public form: FormGroup;
+  public form: FormGroup
 
   constructor(private fb: FormBuilder) {
    

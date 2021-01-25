@@ -8,6 +8,10 @@ import { RegisterComponent } from './pages/register/register.component';
 import { HeaderComponent } from './template/header/header.component';
 import { FooterComponent } from './template/footer/footer.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ChartsComponent } from './pages/charts/charts.component';
+import { ChartsModule } from 'ng2-charts';
+import { PieChartComponent } from './template/pie-chart/pie-chart.component';
+import { BarChartComponent } from './template/bar-chart/bar-chart.component';
 
 @NgModule({
   declarations: [
@@ -15,12 +19,16 @@ import { ReactiveFormsModule } from '@angular/forms';
     LoginComponent,
     RegisterComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    ChartsComponent,
+    PieChartComponent,
+    BarChartComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
